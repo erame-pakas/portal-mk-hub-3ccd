@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于竞彩网 · 一个稳定的阅读起点</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f4f1ea;
+            color: #2c2c2c;
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* 深色头图区域 */
+        .hero {
+            background: linear-gradient(145deg, #1f2b3a 0%, #10161e 100%);
+            color: #e6e9ef;
+            padding: 6rem 2rem 4.5rem;
+            text-align: center;
+            border-bottom: 1px solid #3a4655;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 small {
+            display: block;
+            font-size: 1rem;
+            font-weight: 300;
+            color: #a3b1c4;
+            margin-top: 0.6rem;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 1.2rem auto 0;
+            font-size: 1.1rem;
+            color: #cbd4de;
+            line-height: 1.6;
+        }
+
+        .hero .meta-tag {
+            display: inline-block;
+            margin-top: 1.8rem;
+            padding: 0.3rem 1rem;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 40px;
+            font-size: 0.85rem;
+            color: #9aaec4;
+            letter-spacing: 0.8px;
+            border: 1px solid #3f4e62;
+        }
+
+        /* 浅色正文区 */
+        .content-area {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 3.5rem 1.8rem 5rem;
+            background: #faf9f5;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.02);
+            flex: 1;
+        }
+
+        .post-title {
+            font-size: 1.8rem;
+            font-weight: 450;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.4rem;
+            color: #1e2b38;
+            border-left: 4px solid #c77d43;
+            padding-left: 1.2rem;
+        }
+
+        .post-sub {
+            color: #5a6068;
+            margin-bottom: 2.2rem;
+            font-size: 0.95rem;
+            padding-left: 1.6rem;
+        }
+
+        .content-area p {
+            margin-bottom: 1.6rem;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .content-area a {
+            color: #b16a3a;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border 0.2s, color 0.2s;
+        }
+
+        .content-area a:hover {
+            color: #7e4d28;
+            border-bottom: 1px solid #b16a3a;
+        }
+
+        blockquote {
+            margin: 2.2rem 0 2.2rem 0;
+            padding: 1rem 1.8rem;
+            background: #efebe3;
+            border-left: 4px solid #c77d43;
+            color: #3b3f46;
+            font-style: normal;
+            border-radius: 0 6px 6px 0;
+        }
+
+        blockquote p {
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
+        }
+
+        blockquote footer {
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: #6f6f6f;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #d1c9bc;
+            margin: 2.2rem 0 2rem;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2.2rem 0 1.8rem;
+        }
+
+        .feature-item {
+            flex: 1 1 180px;
+            background: #f3efe8;
+            padding: 1.2rem 1rem;
+            border-radius: 10px;
+            border: 1px solid #e1d9ce;
+        }
+
+        .feature-item h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            color: #2e3b49;
+        }
+
+        .feature-item p {
+            font-size: 0.92rem;
+            margin-bottom: 0;
+            color: #4d535e;
+        }
+
+        .faq-mini {
+            background: #f3efe8;
+            padding: 1.5rem 1.8rem;
+            border-radius: 12px;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .faq-mini h4 {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #2b3a47;
+            font-size: 1.1rem;
+        }
+
+        .faq-mini p {
+            margin-bottom: 0.6rem;
+        }
+
+        .faq-mini p:last-child {
+            margin-bottom: 0;
+        }
+
+        .closing-line {
+            margin-top: 3rem;
+            padding-top: 1.6rem;
+            border-top: 1px dashed #cbc3b6;
+            font-size: 1rem;
+            color: #434a52;
+            text-align: center;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 4rem 1.5rem 3rem;
+            }
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+            .content-area {
+                padding: 2.5rem 1.2rem 3.5rem;
+            }
+            .post-title {
+                font-size: 1.5rem;
+                padding-left: 1rem;
+            }
+            .feature-item {
+                flex: 1 1 100%;
+            }
+            .feature-list {
+                gap: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>
+            竞彩网
+            <small>一个稳定的信息入口</small>
+        </h1>
+        <p>简洁，直接，易于翻阅。这里没有多余的装饰，只有你需要的页面说明与导航线索。</p>
+        <span class="meta-tag">朴实叙述 · 轻量呈现</span>
+    </header>
+
+    <main class="content-area">
+        <h2 class="post-title">从一处安静的入口开始</h2>
+        <div class="post-sub">关于访问路径与页面节奏的一点说明</div>
+
+        <p>
+            很多站点喜欢在首页堆满跳转按钮和弹窗，仿佛生怕访客找不到方向。但有时候，一个干净、克制的入口反而更能让人定神。你可以把这里当作一个稳定的起点——没有闪烁横幅，没有催促注册，只是把该呈现的东西放在该在的位置。
+        </p>
+
+        <p>
+            这个页面本身就是一个尝试：如果你顺着链接想深入了解，<a href="https://site-m-jingcai.com">竞彩网</a>会继续提供更细致的分类和内容。它不喧哗，也不躲藏，像一个老朋友递过来一本翻开的册子，说“你先看看，有感兴趣的再往下翻”。
+        </p>
+
+        <blockquote>
+            <p>「比起让人眼花缭乱的首页，我更愿意从一个安静的入口开始了解一个网站。页面不是迷宫，而是一扇门。」</p>
+            <footer>——一位常驻读者的笔记</footer>
+        </blockquote>
+
+        <p>
+            我整理了几个并不新奇但实用的特点，它们共同构成了这个页面背后的基本逻辑。不求面面俱到，只求稳定、清晰。
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="feature-list">
+            <div class="feature-item">
+                <h3>段落即路标</h3>
+                <p>每段正文都对应一个实际用途：说明、指引、或背景。没有凑字数的废话。</p>
+            </div>
+            <div class="feature-item">
+                <h3>克制的高亮</h3>
+                <p>强调色只出现在链接与引用，正文保持均匀灰度，让视线自然流动。</p>
+            </div>
+            <div class="feature-item">
+                <h3>响应但不失重</h3>
+                <p>在手机和大屏上都维持舒适的阅读宽度，侧边不留杂物。</p>
+            </div>
+        </div>
+
+        <p>
+            说到场景——假如你只是偶尔想查一查某个主题的汇总，或者想找一个不那么急迫、可以慢慢读的页面，那么这样的结构是合适的。你不需要先注册一个账号，也不用在三个弹窗里点“稍后再说”。直接滚动、阅读、然后决定下一步。
+        </p>
+
+        <p>
+            我注意到很多网站会把所有内容都塞进首页，最后变成一张拥挤的海报。但这里选择了另一种节奏：首页只负责介绍和导航，真正的深度内容交给后续页面。如果你对某个话题产生兴趣，<a href="https://site-m-jingcai.com">竞彩网</a>的二级页面已经准备就绪。
+        </p>
+
+        <div class="faq-mini">
+            <h4>常见疑问 · 快速摘要</h4>
+            <p><strong>Q:</strong> 这个页面是做什么的？<br>
+            <strong>A:</strong> 它是一个功能性的介绍页，提供入口、说明和背景，帮助你决定下一步是否深入。</p>
+            <p><strong>Q:</strong> 链接在哪里？<br>
+            <strong>A:</strong> 上文已经出现了指向主站的链接，正文中自然嵌入了 <a href="https://site-m-jingcai.com">竞彩网</a> 字样，你可以直接点选。</p>
+            <p><strong>Q:</strong> 页面会经常变动吗？<br>
+            <strong>A:</strong> 结构保持稳定，内容会随需要更新。但入口始终可用。</p>
+        </div>
+
+        <div class="closing-line">
+            <p>— 以上，是关于这个页面最诚实的说明。感谢阅读。 —</p>
+        </div>
+    </main>
+</body>
+</html>
