@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>竞彩网 · 赛事知识索引</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fbfcf9;
+      color: #1e2a2f;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    /* 标题层级 */
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 550;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.2rem;
+      color: #142126;
+    }
+    .subhead {
+      font-size: 1rem;
+      color: #5f6e73;
+      border-bottom: 1px solid #dce4e0;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2.2rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 570;
+      margin: 2.2rem 0 0.9rem 0;
+      color: #1a2d33;
+      letter-spacing: 0.01em;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 520;
+      margin: 1.6rem 0 0.4rem 0;
+      color: #1f353c;
+    }
+
+    /* 段落 & 文本 */
+    p {
+      margin-bottom: 1.1rem;
+      color: #2a3b40;
+    }
+
+    a {
+      color: #1f6b5e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 0.5px;
+      transition: color 0.15s;
+    }
+    a:hover {
+      color: #0a4d40;
+      text-decoration-thickness: 1.5px;
+    }
+
+    /* 卡片 – 目录式的区块 */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin: 2rem 0 2.5rem 0;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2ebe6;
+      border-radius: 14px;
+      padding: 1.3rem 1.6rem;
+      box-shadow: 0 2px 6px rgba(0,20,15,0.02);
+      transition: box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0,40,30,0.04);
+    }
+    .card-title {
+      font-weight: 540;
+      font-size: 1.05rem;
+      color: #103f37;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .card-title::before {
+      content: "▹";
+      color: #2d8b78;
+      font-size: 1.1rem;
+    }
+    .card p {
+      margin: 0.25rem 0 0 0;
+      font-size: 0.95rem;
+      color: #3a4c50;
+    }
+
+    /* 提示/说明区 */
+    .note-box {
+      background: #eef5f0;
+      border-left: 4px solid #2f8d78;
+      border-radius: 0 10px 10px 0;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .note-box p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+    }
+    .note-box strong {
+      color: #124a3d;
+      font-weight: 540;
+    }
+
+    .info-shelf {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2rem;
+      margin: 1.8rem 0;
+      padding: 1.2rem 0;
+      border-top: 1px solid #dbe5df;
+      border-bottom: 1px solid #dbe5df;
+    }
+    .info-item {
+      font-size: 0.9rem;
+      color: #3f5958;
+    }
+    .info-item span {
+      font-weight: 450;
+      color: #1b4c43;
+    }
+
+    /* 简洁列表 */
+    .topic-list {
+      list-style: none;
+      margin: 0.8rem 0 0.2rem 0;
+    }
+    .topic-list li {
+      padding: 0.2rem 0;
+      font-size: 0.95rem;
+      color: #2c4146;
+    }
+    .topic-list li::before {
+      content: "— ";
+      color: #589b8a;
+    }
+
+    /* 响应式 */
+    @media (max-width: 520px) {
+      body { padding: 1.2rem 0.8rem; }
+      h1 { font-size: 1.6rem; }
+      .card { padding: 1rem 1.2rem; }
+      .note-box { padding: 1rem 1.2rem; }
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #dde7e1;
+      margin: 2rem 0 0.8rem 0;
+    }
+    .footer-meta {
+      font-size: 0.8rem;
+      color: #657a7a;
+      margin-top: 2.8rem;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <h1>竞彩知识库 · 稳定入口</h1>
+  <div class="subhead">赛事信息索引 · 目录感布局</div>
+
+  <p>
+    <a href="https://site-index-jingcai.com">竞彩网</a> 定位为一个面向日常浏览的赛事知识索引点。这里不堆砌实时数据，而是整理出一套相对完整的目录结构，让访问者能在安静界面中快速定位感兴趣的方向。下文从入口、结构、使用场景几个侧面展开说明。
+  </p>
+
+  <!-- 目录式卡片区块 -->
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-title">知识分类 · 赛事档案</div>
+      <p>联赛背景、球队简史、赛制说明、常见术语。每一类都单独成页，彼此通过关键词关联。适合赛前快速浏览背景。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">数据说明 · 统计口径</div>
+      <p>解释页面中使用到的胜率、分布、走势等指标的统计方式，以及数据更新节奏。避免因误解指标而产生判断偏差。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">相关资源 · 延伸阅读</div>
+      <p>整理了一些公开的赛事百科、规则手册以及历史记录链接。作为补充材料，便于深度查阅。</p>
+    </div>
+  </div>
+
+  <!-- 提示区 -->
+  <div class="note-box">
+    <p><strong>提示</strong> 本索引站点的所有内容均基于公开赛事信息整理，不提供任何投注建议或预测结论。页面中的数字、描述仅用于知识展示，请结合自身判断使用。</p>
+  </div>
+
+  <h2>页面结构说明</h2>
+  <p>
+    整个站点采用窄正文宽度，每一层标题清晰区分信息层级。顶部提供全局分类入口，往下依次是「热门赛事档案」「规则与术语」「常见问题摘要」。每个分类下保持一致的卡片样式，减轻阅读负担。页脚放置版本说明与修订历史，方便回头查找变动。
+  </p>
+
+  <h3>信息区 · 常用索引</h3>
+  <ul class="topic-list">
+    <li>五大联赛历史赛季结构</li>
+    <li>杯赛赛制对比（淘汰 / 小组 / 混合）</li>
+    <li>常用数据名词解释（让球、大小、欧亚换算）</li>
+    <li>裁判规则变更摘要（2021–2025）</li>
+  </ul>
+
+  <div class="info-shelf">
+    <div class="info-item"><span>更新周期</span> 每周一、四同步内容</div>
+    <div class="info-item"><span>涵盖赛事</span> 足球 · 篮球 · 网球（大满贯）</div>
+    <div class="info-item"><span>条目总量</span> 230+ 知识卡片</div>
+  </div>
+
+  <h2>FAQ 摘要</h2>
+  <p><strong>Q：页面中的链接会跳转到哪里？</strong><br>
+  所有链接均指向 <a href="https://site-index-jingcai.com">竞彩网</a> 内的对应知识页面，或外部公开资料（标注来源）。主站始终作为稳定入口。</p>
+
+  <p><strong>Q：是否包含实时比分或赔率？</strong><br>
+  不包含。本站定位为知识索引，不提供动态数据流。所有数字均为静态示例或历史记录。</p>
+
+  <p><strong>Q：内容多久更新一次？</strong><br>
+  通常每周两次，遇到规则变更或赛季更替时会增补条目。更新日志存放在站点底部。</p>
+
+  <hr>
+  <div class="footer-meta">
+    竞彩知识库 · 索引版本 2025.04 · 内容供参考
+  </div>
+
+</div>
+</body>
+</html>
